@@ -1,0 +1,16 @@
+<!--
+// ============================================================================
+
+// ============================================================================
+-->
+<div class="location">
+    <span class="city"> 
+        {{ getCity() }}
+        <span *ngIf="location.postal_code">
+            {{ location.postal_code }},
+        </span>
+    </span>
+    <span class="region">
+         <span *ngIf="location.region">{{ location.region }},</span> {{ location.country }}
+    </span>
+</div>

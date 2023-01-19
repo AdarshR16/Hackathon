@@ -1,0 +1,63 @@
+<!--
+// ============================================================================
+
+// ============================================================================
+-->
+<div>
+    <section class="current-forecast-container">
+        <div class="outside time">
+            {{ localDate }}
+        </div>
+        <img class="weather-icon" [src]="getForcastImgSrc()" alt="Forcast" />
+        <div class="temp-container">
+            <div class="temp">
+                {{ forecast.temp }}°
+            </div>
+            <div class="temp-scale">F</div>
+            <div class="real-feel">
+                Feels Like {{ forecast.app_temp }}°
+            </div>
+        </div>
+        <div class="outside">
+            {{ getTimeOfDay() }} - {{ getOutsideDescription() }}
+        </div>       
+    </section> 
+    <section class="current-forecast-details-container"> 
+        <div class="details-row" *ngIf="forecast.sunrise && forecast.sunset">
+            <span> Sunrise /  Sunset</span>
+            <span class="details-value">{{ getLocalSunrise() }} / {{ getLocalSunset() }}</span>
+        </div>  
+        <div class="details-row">
+            <span>Air Quality</span>
+            <span class="details-value" [ngClass]="getAirQualityCss()">{{ getAirQualityDescription() }}</span>
+        </div>    
+        <div class="details-row">
+            <span>UV Index</span>
+            <span class="details-value" [ngClass]="getUVIndexCss()">{{ getUVIndexDescription() }}</span>
+        </div>                          
+        <div class="details-row">
+            <span>Humidity</span>
+            <span class="details-value">{{ forecast.rh }}%</span>
+        </div>       
+        <div class="details-row">
+            <span>Wind Speed / Direction</span>
+            <span class="details-value">{{ forecast.wind_spd }} mph / {{ forecast.wind_cdir }}</span>
+        </div>  
+        <div class="details-row">
+            <span>Cloud Coverage</span>
+            <span class="details-value">{{ forecast.clouds }}%</span>
+        </div> 
+        <div class="details-row">
+            <span>Dew Point</span>
+            <span class="details-value">{{ forecast.dewpt }}°</span>
+        </div>  
+        <div class="details-row">
+            <span> Latitude /  Longitude</span>
+            <span class="details-value">{{ forecast.lat }} / {{ forecast.lon }}</span>
+        </div>  
+        <div class="details-row" *ngIf="forecast.ob_time">
+            <span>As of</span>
+            <span class="details-value">{{ getLastUpdated() }}</span>
+        </div>                                           
+    </section> 
+</div>

@@ -1,0 +1,39 @@
+/*
+// ============================================================================
+//   
+// ============================================================================
+*/
+.location-search-container {
+    width: 500px;
+    overflow: hidden;
+}
+.input-location-search {
+    width: 70%;
+    height: 35px;
+    border: 0;
+    background-color: #eee;
+    padding: 8px;
+}
+.btn-location-search, .btn-gps {
+    vertical-align: top;
+    background-color: darkblue;
+}
+.btn-location-search {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.btn-gps {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}  
+.gps-search-container {
+    margin-top: 15px;
+} 
+@media screen and (max-width: 930px) {
+    .location-search-container {
+        width: 300px;
+    }
+    .input-location-search {
+        width: 150px;
+    }
+}

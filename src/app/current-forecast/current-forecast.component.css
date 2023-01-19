@@ -1,0 +1,59 @@
+/*
+// ============================================================================
+//  
+// ============================================================================
+*/
+.current-forecast-container {
+    width: 50%;
+    display: inline-block;
+}
+.temp-container {
+    display: inline-block;   
+}
+.weather-icon {
+    height: 88px;
+    margin-right: 12px;
+    width: 88px;    
+}
+.temp {
+    font-size: 84px;
+    font-weight: 500;
+    letter-spacing: -.7px;
+    line-height: 1.07; 
+    display: inline-block;   
+}
+.temp-scale {
+    font-size: 24px;
+    line-height: 1.28;
+    margin-left: -24px;
+    opacity: .6;
+    display: inline-block 
+}
+.outside {
+    font-weight: bold;
+    margin-top: 18px;
+    font-size: 15px;
+}
+.outside.time {
+    opacity: 0.5;
+    margin-top: unset;
+}
+.current-forecast-details-container {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14.5px;
+}
+
+@media screen and (max-width: 767px) {
+    .current-forecast-container {
+        margin-left: unset;
+        width: unset;
+        display: initial;
+    }    
+    .current-forecast-details-container {
+        display: initial;
+        width: unset;
+        vertical-align: unset;
+    }   
+}

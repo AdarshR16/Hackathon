@@ -1,0 +1,43 @@
+<!--
+// ============================================================================
+//    
+// ============================================================================
+-->
+<div class="daily-forecast-container">
+    <section class="forecast-date">
+        {{ forecastDateString }}
+    </section>
+    <section>
+        <div>
+            <img class="weather-icon" [src]="getForcastImgSrc()" alt="Forcast" />
+            <div class="forecast-description">
+                {{ forecast.weather.description }}
+            </div>
+        </div>
+        <div class="high-temp">
+            {{ forecast.max_temp }}°
+        </div>
+         / 
+        <div class="low-temp">
+            {{ forecast.low_temp }}°
+        </div>
+    </section>
+    <section class="daily-details-section">
+        <div title="Chance of precipitation (rain / snow)">
+            <span>☂️ </span>
+            <span class="details-value">{{ forecast.pop }}%</span>
+        </div>
+        <div title="Humidity">
+            <span>😰 </span>
+            <span class="details-value">{{ forecast.rh }}%</span>
+        </div>  
+        <div title="UV Index">
+            <span>🕶 </span>
+            <span class="details-value" [ngClass]="getUVIndexCss()">{{ getUVIndexDescription() }}</span>
+        </div>         
+        <div title="Wind speed / direction">
+            <span>💨 </span>
+            <span class="details-value">{{ forecast.wind_spd }} mph {{ forecast.wind_cdir }}</span>
+        </div>                  
+    </section>           
+</div>

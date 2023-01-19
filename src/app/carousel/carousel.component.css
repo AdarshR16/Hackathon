@@ -1,0 +1,56 @@
+/*
+// ============================================================================
+
+// ============================================================================
+*/
+.carousel-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-control {
+    width: 50px;
+    display: inline-block;
+}
+.carousel-control.left {
+    margin-right: -20px;
+}
+.carousel-control.right {
+    margin-left: -20px;
+}
+.carousel-content {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    overflow-x: scroll; 
+}
+.carousel-btn {
+    background-color: darkblue;
+}
+.carousel-content-container {
+    width: 95%;
+}
+.carousel-progress-container {
+    margin: auto;
+}
+.carousel-progress-bar, .carousel-progress-scroll {
+    background-color: #1976d2;
+    width: 0;
+    height: 4px;
+    transition: width 200ms, left 200ms;
+}
+.carousel-progress-scroll {
+    position: relative;
+    width: 100px;
+}
+/* Hide scrollbar */
+.carousel-content {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    overflow: -moz-scrollbars-none;
+}
+.carousel-content::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}

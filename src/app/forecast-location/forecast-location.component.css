@@ -1,0 +1,23 @@
+/*
+// ============================================================================
+//    
+// ============================================================================
+*/
+.location {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+.city {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.region {
+    font-style: italic;
+}
+
+@media screen and (max-width: 767px) {
+    .location {
+        text-align: center;
+    }
+}
